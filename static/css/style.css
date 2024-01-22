@@ -1,0 +1,97 @@
+#headerHome {
+    background-image: url('../img/inicio.webp');
+  
+    /* Ajustar la configuración de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+#headerNews {
+    background-image: url('../img/jardin.jpg');
+  
+    /* Ajustar la configuración de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+#headerNew {
+    background-color: #1C5744;
+}
+
+#footer {
+    background-image: url('../img/utal.webp');
+  
+    /* Ajustar la configuración de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.nav-item {
+    font-size: large;
+    color: white; /* Color del texto */
+    transition: font-weight, color, border, padding 2s ;
+
+}
+
+.nav-item:hover {
+    color: #C2E093; /* Color del texto */
+    font-weight: bold; 
+    border-bottom: 2px solid #C2E093; /* Agrega una línea blanca de 2px de grosor */
+    padding-bottom: 0%; 
+    
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.custom-toggler {
+    border: 1px solid white; /* Agrega un contorno blanco al botón */
+    color: white; /* Cambia el color del texto del botón a blanco */
+}
+  
+/* Estilo del ícono blanco */
+.icon-white {
+    color: white; /* Cambia el color del ícono a blanco */
+}
+
+.active {
+    font-weight: bold; 
+    color: white; /* Color del texto */
+    border-bottom: 2px solid white; /* Agrega una línea blanca de 2px de grosor */
+    padding-bottom: 0%; 
+    width: 80px;    
+}
+
+#titulo {
+    color: white;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.subtitulo{
+    color: #78B721;
+    font-weight: bold; 
+    font-size: x-large;
+}
+
+#goal {
+    color: white;
+    
+}
+
+.bold{
+    font-weight: bold;
+}
+  
+
+.name{
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    font-size:large ;
+    font-weight: bold;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -64,10 +64,16 @@ body {
     width: 80px;    
 }
 
-#titulo {
+#tituloHome {
     color: white;
-    margin-top: 15%;
-    margin-bottom: 15%;
+    margin-top: 23%;
+    margin-bottom: 22%;
+}
+
+#tituloOthers {
+    color: white;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .subtitulo{

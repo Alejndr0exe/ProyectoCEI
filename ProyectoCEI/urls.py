@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from homeApp.views import *
 from newsPortal import views
+from publications.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,5 @@ urlpatterns = [
     path('members/', miembros, name='miembros'),
     path('newsPortal/', views.newsPortal, name='news' ),
     path('news/<int:id>', views.newCei, name='new' ),
+    path('pub/', publications, name='pub'),
 ]

@@ -18,6 +18,12 @@
     background-color: #1C5744;
 }
 
+#headerPub{
+    background-image: url('../img/utaldron.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 #footer {
     background-image: url('../img/utal.webp');
   

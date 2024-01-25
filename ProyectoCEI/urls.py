@@ -19,6 +19,7 @@ from django.urls import path
 from homeApp.views import *
 from newsPortal import views
 from publications.views import *
+from research.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +28,5 @@ urlpatterns = [
     path('newsPortal/', views.newsPortal, name='news' ),
     path('news/<int:id>', views.newCei, name='new' ),
     path('pub/', publications, name='pub'),
+    path('research/', research, name='research'),
 ]

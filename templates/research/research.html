@@ -22,19 +22,19 @@
   <body>
 
     <!--Header-->
-    <div class="container-fluid text-center" id="headerHome">
+    <div class="container-fluid text-center" id="headerRes">
 
       <!--Logo-->
         <div class="row justify-content-center">
 
             <div class="col-2 mt-3 me-3" style="padding: 0%; text-align: end;">
-                <img src="{% static 'img/logo.png' %}" alt="logo" width="70px">
+              <img src="{% static 'img/logo.png' %}" alt="logo" width="70px">
             </div>
             <div class="col-2 align-self-end mt-3 me-5 pe-5 name">
-                Centre for Integrative Ecology
+              Centre for Integrative Ecology
             </div>
 
-        </div>
+            </div>
 
         <!--Navbar-->
         <div class="row justify-content-center">
@@ -47,19 +47,19 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mx-auto mb-2 mb-lg-0 justify-content-center">
                     <li class="nav-item me-5">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item me-5">
+                      <a class="nav-link active" aria-current="page" href="#">Research</a>
                     </li>
                     <li class="nav-item me-5">
                       <a class="nav-link"  href="{% url 'miembros' %}">Members</a>
                     </li>
                     <li class="nav-item me-5">
-                      <a class="nav-link"  href="#">Publications</a>
+                      <a class="nav-link" href="{% url 'pub' %}">Publications</a>
                     </li>
                     <li class="nav-item me-5">
                       <a class="nav-link" href="{% url 'news' %}">News</a>
-                    </li>
-                    <li class="nav-item me-5">
-                      <a class="nav-link" href="#">Contact</a>
                     </li>
                   </ul>
               </div>
@@ -71,103 +71,104 @@
         </div>
 
         <!--Titulo-->
-        <div class="row justify-content-center" >
+          <div class="row justify-content-center" >
 
-            <div class="container ">
-                <h1 class="display-3" id="titulo">
+              <div class="container ">
+                  <h1 class="display-3" id="tituloOthers">
 
-                    Centre for Integrative Ecology
-    
-                </h1>
-            </div>            
+                      Research
+  
+                  </h1>
+              </div>            
 
-        </div>
-
-
+          </div>
 
 
-    </div>
+
+
+      </div>
 
     <!--Research-->
     <div class="container-fluid text-center px-5 py-4">
 
-      <div class="row justify-content-center my-5">
-        <div class="col research">
-          <h1 style="color:#29862C;">
-            Research
-          </h1>
+      <div class="row justify-content-start my-5">
+        <div class="col-4">
+          <h3 style="color:#78B721;">
+            CIE's scientific areas:
+          </h3>
         </div>
       </div>
+    
 
-      <!--Astroecology-->
-      <div class="row justify-content-between mb-5 ">
+      <div class="container" id="customContainer"> 
 
-        <div class="col-lg-6">
-          <img src="{% static 'img/astroecology.webp' %}" alt="astroecology img" width="80%" >
-        </div>
+        <div class="card" id="customCard">
+          <img src="{% static 'img/astroecology.webp' %}" alt=" astroecology img " >
 
-        <div class="col-lg-6 align-self-center mt-lg-0 mt-3 px-5">
-
-          <a href="#" class="row subtitulo">
-            Astroecology
-          </a>
-
-
-          <p class="row mt-3" style="text-align: justify;">
-            Astroecology is a research field devoted to scientific study of the interactions of life with extreme environments even exoplanetary conditions. By applying theory, methods and technology from ecology, microbiology, molecular biology, and engineering, we aim to help solve major global challenges such as extreme climate change and space-research stuff.
-          </p>
+          <div class="intro">
+            <h1>
+              Astroecology
+            </h1>
+            <p>
+              <span>Astroecology</span> is a research field devoted to scientific study of the interactions of life with extreme environments even exoplanetary conditions. By applying theory, methods and technology from ecology, microbiology, molecular biology, and engineering, we aim to help solve major global challenges such as extreme climate change and space-research stuff.
+            </p>
+          </div>
 
         </div>
+
+        <div class="card" id="customCard">
+          <img src="{% static 'img/microbial.webp' %}" alt=" microbialecology img " >
+
+          <div class="intro">
+            <h1>
+              Microbial Ecology
+            </h1>
+            <p>
+               The diversity and functional significance of microbial communities have become apparent in the last 20 years. <span>Microbial and viral communities</span> dominate nearly every habitat on Earth from the deep ocean subsurface to the mountain tops and everything in between.
+            </p>
+          </div>
+
+        </div>
+
 
       </div>
 
+      <div class="container" id="customContainer"> 
+
+        <div class="card" id="customCard">
+          <img src="{% static 'img/plant.webp' %}" alt=" plant img " >
+
+          <div class="intro">
+            <h2>
+              Plant Ecology and Evolution in Agroecosystems
+            </h2>
+            <p>
+              <span>Plants </span>are the key as they produce most of the organic energy that sustain life and ecosystem processes on earth. This <span>organic energy</span> can be in live organisms or dead matter and sustain plant-based trophic food webs or detritus-based trophic webs.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="card" id="customCard">
+          <img src="{% static 'img/astroecology.webp' %}" alt=" astroecology img " >
+
+          <div class="intro">
+            <h1>
+              Astroecology
+            </h1>
+            <p>
+              <span>Astroecology</span> is a research field devoted to scientific study of the interactions of life with extreme environments even exoplanetary conditions. By applying theory, methods and technology from ecology, microbiology, molecular biology, and engineering, we aim to help solve major global challenges such as extreme climate change and space-research stuff.
+            </p>
+          </div>
+
+        </div>
+
+
+      </div>
+      
       <hr style="color: #3A7DA4;" class="mx-5" >
 
-      <!--Microbial Ecology-->
-      <div class="row justify-content-between mb-5 ">
-
-        <div class="col-lg-6">
-          <img src="{% static 'img/microbial.webp' %}" alt="astroecology img" width="80%" >
-        </div>
-
-        <div class="col-lg-6 align-self-center mt-lg-0 mt-3 px-5">
-
-          <a href="#" class="row subtitulo">
-            Microbial Ecology
-          </a>
-          <p class="row mt-3" style="text-align: justify;">
-            The diversity and functional significance of microbial communities have become apparent in the last 20 years. Microbial and viral communities dominate nearly every habitat on Earth from the deep ocean subsurface to the mountain tops and everything in between.
-          </p>
-
-        </div>
-
-      </div>
-
-      <hr style="color: #3A7DA4;" class="mx-5" >
-
-      <!--Plant Ecology-->
-      <div class="row justify-content-between mb-5 ">
-
-        <div class="col-lg-6">
-          <img src="{% static 'img/plant.webp' %}" alt="astroecology img" width="80%" >
-        </div>
-
-        <div class="col-lg-6 align-self-center mt-lg-0 mt-3 px-5">
-
-          <a href="#" class="row subtitulo">
-            Plant Ecology and Evolution in Agroecosystems
-          </a>
-          <p class="row mt-3" style="text-align: justify;">
-            Plants are the key as they produce most of the organic energy that sustain life and ecosystem processes on earth. This organic energy can be in live organisms or dead matter and sustain plant-based trophic food webs or detritus-based trophic webs.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <hr style="color: #3A7DA4;" class="mx-4  border-2" >        
+   
 
    
 

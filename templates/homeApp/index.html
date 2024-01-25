@@ -50,7 +50,7 @@
                       <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item me-5">
-                      <a class="nav-link" href="#">Research</a>
+                      <a class="nav-link" href="{% url 'research' %}">Research</a>
                     </li>
                     <li class="nav-item me-5">
                       <a class="nav-link"  href="{% url 'miembros' %}">Members</a>
@@ -91,12 +91,15 @@
     <!--News-->
     <div class="container-fluid text-center px-5 py-4">
 
-      <div class="row justify-content-start my-5">
+      <div class="row justify-content-between  my-5">
         <div class="col-3">
-          <h1 style="color:#3A7DA4;">
-            News
-          </h1>
+          <h3 style="color:#3A7DA4;">
+            Last News
+          </h3>
         </div>
+
+        <a href="{% url 'news' %}" style="background-color:#3A7DA4; border-color:#3A7DA4; "  class="col-2 align-self-center btn btn-primary mt-3 mx-5"> News portal... </a>
+
       </div>
 
       <div class="row justify-content-evenly gx-5">
@@ -125,14 +128,6 @@
         
 
       </div>
-
-      <!--Boton portal de noticias-->
-      <div class="row justify-content-end">
-
-        <a href="{% url 'news' %}" style="background-color:#3A7DA4;"  class="col-2 btn btn-primary mt-3 mx-5"> News portal... </a>
-
-      </div>
-
 
     </div>
 

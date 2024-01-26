@@ -30,6 +30,12 @@
     background-position: center;
 }
 
+#headerMem{
+    background-image: url('../img/jardinmem.webp');
+    background-size: cover;
+    background-position: center;
+}
+
 #footer {
     background-image: url('../img/utal.webp');
   

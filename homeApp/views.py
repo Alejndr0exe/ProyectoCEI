@@ -10,6 +10,3 @@ def index(request):
     }
 
     return render(request,"homeApp/index.html", data)
-
-def miembros(request):
-    return render(request,"homeApp/members.html")

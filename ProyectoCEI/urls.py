@@ -20,6 +20,7 @@ from homeApp.views import *
 from newsPortal import views
 from publications.views import *
 from research.views import *
+from membersApp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),

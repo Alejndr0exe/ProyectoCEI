@@ -24,21 +24,18 @@
     <!--Header-->
     <div class="container-fluid text-center" id="headerHome">
 
-      <!--Logo-->
-        <div class="row justify-content-center">
 
-            <div class="col-2 mt-3 me-3" style="padding: 0%; text-align: end;">
-              <img src="{% static 'img/logo.png' %}" alt="logo" width="70px">
-            </div>
-            <div class="col-2 align-self-end mt-3 me-5 pe-5 name">
-              Centre for Integrative Ecology
-            </div>
-
-        </div>
 
         <!--Navbar-->
-        <div class="row justify-content-center">
-          <div class="col mt-3">
+        <div class="row align-items-top justify-content-between">
+
+          <div class="col-2 mt-4">
+              
+            <img src="{% static 'img/logo.png' %}" alt="logo" width="125px">              
+
+          </div>
+
+          <div class="col-6 mt-5">
 
             <nav class="nav navbar-expand-lg ">
               <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,12 +70,13 @@
         <!--Titulo-->
         <div class="row justify-content-start" >
 
-            <div class="col-7">
-                <h3 class="ms-5" style=" text-align: left;" id="tituloHome">
-
+            <div class="col-7" id="tituloHome">
+                <h2 class="ms-5" style="font-weight: bold;">
+                    Center Of Integrative Ecology
+                </h2>
+                <h4 class="ms-5" >
                   Understanding natural processes requires integrating diverse knowledge from various fields, aiming to <b>study ecological phenomena through a multiscale approach.</b>
-    
-                </h3>
+                </h4>
             </div>            
 
         </div>
@@ -87,6 +85,23 @@
 
 
     </div>
+  
+
+    <!--Lines of research-->
+    <div class="row align-items-center justify-content-evenly mx-5 my-5">
+
+      <h5 class="col " style="font-weight: bold;">
+        our lines of research:
+      </h5>
+
+      <a href="{% url 'research' %}" style="background-color: #025E73;" class="ovalos py-3 col"> Astroecology </a>
+      <a href="{% url 'research' %}" style="background-color: #B2CF53;" class="ovalos py-3 col"> Microbial Ecology </a>
+      <a href="{% url 'research' %}" style="background-color: #D97823;" class="ovalos py-2 col"> Plant Ecology and Evolution in Agroecosystems </a>
+      <a href="{% url 'research' %}" style="background-color: #525507;" class="ovalos py-3 col"> Astroecology </a>
+
+    </div>
+
+    <hr class="mx-5">
 
     <!--News-->
     <div class="container-fluid text-center px-5 py-4">
@@ -104,9 +119,9 @@
 
       <div class="row justify-content-evenly gx-5">
 
-        {% for new in news|slice:":3" %}
+        {% for new in news|slice:":4" %}
         
-        <div class="card mx-3 my-3" style="width: 20rem;">
+        <div class="card my-3" style="width: 17rem; ">
           <img src="{% static 'img/new1.webp' %}" alt="img" class="card-img-top">
 
           <div class="card-header text-body-secondary fw-lighter fst-italic"> {{new.fecha}} </div>
@@ -132,34 +147,85 @@
     </div>
 
 
+
+
     <br><br><br><br><br><br><br><br><br>
 
 
    <!--Footer-->
-   <div class="container-fluid text-center" id="footer">
-    
-    <div class="row justify-content-center align-items-center mx-5 py-5" >
+   <div class="container-fluid text-center px-5 py-5" id="footer">
 
-      <div class="col-lg-3">
-        <img src="{% static 'img/logogrande.png' %}" alt="logo">
+    <div class="row">
+
+      <div class="col">
+        <div class="row">
+          <img src="{% static 'img/logo.png' %}" alt="logo del cei" style="width: 10rem;" >
+        </div>
+        <div class="row">
+          <img src="{% static 'img/logoutal.png' %}" alt="logo de utal" style="width: 10rem;" class="my-5">
+        </div>
       </div>
 
-      <div class="col-lg-7 ps-5 mt-3">  
-          <h2 style="text-align: left;" id="goal">
-            The vast and complex set of factors behind any natural process usually requires the participation of different knowledge in its understanding. Our goal is to converge in the study of ecological phenomena from different specialties through a multiscale approach.
+      <div class="col">
+        <div class="row sec-footer">
+          Navegation
+        </div>
+        <ul class="list-footer">
+          <li class="mb-2">
+            <a href="#" class="item-footer">Home</a>
+          </li>
+          <li class="mb-2"> 
+            <a href="{% url 'research' %}" class="item-footer">Research</a>
+          </li>
+          <li class="mb-2">
+            <a href="{% url 'miembros' %}" class="item-footer">Members</a>
+          </li>
+          <li class="mb-2">
+            <a href="{% url 'pub' %}" class="item-footer">Publications</a>
+          </li>
+          <li class="mb-2">
+            <a href="{% url 'news' %}" class="item-footer">News</a>
+          </li>
+        </ul>
+      </div>
 
-          </h2>
-      </div>            
+      <div class="col">
+        <div class="row sec-footer">
+          Contact
+        </div>
+
+        <ul class="list-footer">
+          <li class="mb-2 item-footer">
+            contact@cei.cl
+          </li>
+          <li class="mb-2 item-footer"> 
+            Address: Universidad de Talca ¿?
+          </li>
+          
+        </ul>
+
+      </div>
+
+      <div class="col">
+        <div class="row sec-footer">
+          social networks
+        </div>
+
+        <ul class="list-footer">
+          <li class="mb-2 icon-footer">
+            <a href="https://www.instagram.com/" class="list-footer item-footer"> <i class="bi bi-instagram"></i> </a>
+          </li>
+          <li class="mb-2 icon-footer"> 
+            <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" class="list-footer item-footer"> <i class="bi bi-tiktok"></i> </a>
+          </li>
+          <li class="mb-2 icon-footer"> 
+            <a href="https://twitter.com/i/flow/login" class="list-footer item-footer"> <i class="bi bi-twitter-x"></i> </a>
+          </li>
+          
+        </ul>
+      </div>
 
     </div>
-
-
-    <div class="row justify-content-center align-items-center mt-1">
-
-      <img src="{% static 'img/logoutal.png' %}" alt="logoutal" style="max-width: 17%; height: auto;">
-
-    </div>
-
 
    </div>
 

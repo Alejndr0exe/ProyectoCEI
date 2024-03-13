@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from homeApp.views import *
 from newsPortal import views
 from publications.views import *
@@ -33,4 +35,18 @@ urlpatterns = [
     path('pub/', publications, name='pub'),
     path('research/', research, name='research'),
     path('intranet/', intranet, name='intranet'),
+    path('script/', script, name='script'),
+	path('addScript/', addScript, name='addScript'),
+    path('data/', data, name='data'),
+	path('addData/', addData, name='addData'),
+    path('manuals/', manual, name='manuals'),
+	path('addManual/', addManual, name='addManual'),
+	path('eliminarScript/<int:id>/', eliminarScript, name='eliminarScript'),
+	path('eliminarData/<int:id>/', eliminarData, name='eliminarData'),
+	path('eliminarManual/<int:id>/', eliminarManual, name='eliminarManual'),
+
+
 ]
+
+if settings.DEBUG:
+	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

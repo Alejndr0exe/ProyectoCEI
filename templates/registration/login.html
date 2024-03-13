@@ -16,16 +16,16 @@
     <div class="row justify-content-center">
         <form method="post" class="col-5">
 
-            <img class="mb-4" src="{% static 'img/logo.png' %}" alt="" width="72" height="57">
+            <a href="{% url 'home' %}"><img class="mb-4" src="{% static 'img/logo.png' %}" alt="" width="72" height="57"></a>
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
         
             {% csrf_token %}
 
-            <div class="form-floating">
+            <div class="form-floating mb-3">
               <input type="text" class="form-control" id="id_username" name="username" placeholder="usename...">
               <label for="floatingInput">Username</label>
             </div>
-            <div class="form-floating">
+            <div class="form-floating mb-3">
               <input type="password" class="form-control"  id="id_password" name="password" placeholder="Password...">
               <label for="floatingPassword">Password</label>
             </div>

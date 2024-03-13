@@ -115,6 +115,9 @@ body {
     margin-top: 5%;
     margin-bottom: 7%;
     text-align: left;
+    background-color: #6a6a6aaf;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 #tituloOthers {

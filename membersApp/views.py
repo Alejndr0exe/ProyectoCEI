@@ -2,11 +2,18 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from membersApp import forms
+from membersApp.models import Members
 
 # Create your views here.
 
 def miembros(request):
-    return render(request,"members/members.html")
+
+    members = Members.objects.all()
+    data = {
+        'members' : members
+    }
+
+    return render(request,"members/members.html", data)
 
 def addMiembro(request):
     form = forms.addMember()

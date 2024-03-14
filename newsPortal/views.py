@@ -8,7 +8,7 @@ def newsPortal(request):
         'news' : news
     }
 
-    return render(request,"news/news.html", data)
+    return render(request,"news/news.html", data) 
 
 def newCei (request, id):
     new = News.objects.get (id = id)

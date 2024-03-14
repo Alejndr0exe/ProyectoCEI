@@ -88,95 +88,26 @@
     </div>
 
 
-    <div class="container mt-5" id="containerMember">
+    <div class="container-fluid mt-5" id="containerMember">
+
+      {% for member in members %}
 
       <div class="card" id="cardMember">
         <figure>
-          <img src="{% static 'img/perfil.jpg' %}" alt="">
+          <img src="{{ member.img.url }}" alt="{{ member.nombre }}">
         </figure>
         <div class="contenido">
-          <a href="#" class="h4">Dr. Marco Molina Montenegro</a>
-          <p>Director</p>
+          <a href="#" class="h4">{{ member.titulo }}{{ member.nombre }}</a>
+          <p>{{ member.academic_rank }}</p>
         </div>
       </div>
 
-      <div class="card" id="cardMember">
-        <figure>
-          <img src="{% static 'img/perfil.jpg' %}" alt="">
-        </figure>
-        <div class="contenido">
-          <a href="#" class="h4">Dr. Pedro Gundel</a>
-          <p>Principal Investigators</p>
-        </div>
-      </div>
-
-      <div class="card" id="cardMember">
-        <figure>
-          <img src="{% static 'img/perfil.jpg' %}" alt="">
-        </figure>
-        <div class="contenido">
-          <a href="#" class="h4">Eduardo Castro-Nallar</a>
-          <p>Principal Investigators</p>
-        </div>
-      </div>
-
-      <div class="card" id="cardMember">
-        <figure>
-          <img src="{% static 'img/perfil.jpg' %}" alt="">
-        </figure>
-        <div class="contenido">
-          <a href="#" class="h4">Dr. Gabriel Ballesteros</a>
-          <p>Associated Researchers</p>
-        </div>
-      </div>
+      {% endfor %}  
       
 
     </div>
 
-    <div class="container mt-3" id="containerMember">
-
-      <div class="card" id="cardMember">
-        <figure>
-          <img src="{% static 'img/perfil.jpg' %}" alt="">
-        </figure>
-        <div class="contenido">
-          <a href="#" class="h4">Dr. Andrea Ueno</a>
-          <p>Associated Researchers</p>
-        </div>
-      </div>
-
-      <div class="card" id="cardMember">
-        <figure>
-          <img src="{% static 'img/perfil.jpg' %}" alt="">
-        </figure>
-        <div class="contenido">
-          <a href="#" class="h4">Dr. Ian Acuña</a>
-          <p>Associated Researchers</p>
-        </div>
-      </div>
-
-      <div class="card" id="cardMember">
-        <figure>
-          <img src="{% static 'img/perfil.jpg' %}" alt="">
-        </figure>
-        <div class="contenido">
-          <a href="#" class="h4">Dr. Jaime Alarcón</a>
-          <p>Postdoctoral Researchers</p>
-        </div>
-      </div>
-
-      <div class="card" id="cardMember">
-        <figure>
-          <img src="{% static 'img/perfil.jpg' %}" alt="">
-        </figure>
-        <div class="contenido">
-          <a href="#" class="h4">Dr. Jorge Gallardo</a>
-          <p>Postdoctoral Researchers</p>
-        </div>
-      </div>
-      
-
-    </div>
+  
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

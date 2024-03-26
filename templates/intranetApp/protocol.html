@@ -3,9 +3,9 @@
 {% block contenido %}
 <div class="container content-center mt-5" >
 
-    {% if manuals %}
+    {% if protocolos %}
 
-        <table class="table" id="tablaManuals" >
+        <table class="table" id="tablaProtocols" >
 
             <thead>
                 <tr>
@@ -21,16 +21,16 @@
 
             <tbody>
 
-                {% for manual in manuals %}
+                {% for protocolo in protocolos %}
                     <tr>
-                        <td> <a href="{{manual.documento.url}}" target="_blank">{{manual.documento}}</a> </td>
-                        <td>{{manual.investigador}}</td>
-                        <td>{{manual.proyecto}}</td>
-                        <td>{{manual.descripcion}}</td>
-                        <td>{{manual.created_at}}</td>
+                        <td> <a href="{{protocolo.documento.url}}" target="_blank">{{protocolo.documento}}</a> </td>
+                        <td>{{protocolo.investigador}}</td>
+                        <td>{{protocolo.proyecto}}</td>
+                        <td>{{protocolo.descripcion}}</td>
+                        <td>{{protocolo.created_at}}</td>
                         
                         <td>
-                            <a href="{% url 'eliminarDoc' manual.id %}" class="btn btn-danger"  ><i class="bi bi-trash3"></i></a>
+                            <a href="{% url 'eliminarDoc' protocolo.id %}" class="btn btn-danger"  ><i class="bi bi-trash3"></i></a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -46,7 +46,7 @@
         {% else %}
 
             <div class="alert container alert-danger text-center display-4 my-3">
-                No Hay Manuales Subidos
+                No Hay Protocolos Registrados
             </div>
 
 

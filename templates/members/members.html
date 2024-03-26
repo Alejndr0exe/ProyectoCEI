@@ -97,7 +97,7 @@
           <img src="{{ member.img.url }}" alt="{{ member.nombre }}">
         </figure>
         <div class="contenido">
-          <a href="#" class="h4">{{ member.titulo }}{{ member.nombre }}</a>
+          <a href="{% url 'infoMembers' member.id %}" class="h4">{{ member.titulo }} {{ member.nombre }}</a>
           <p>{{ member.academic_rank }}</p>
         </div>
       </div>
@@ -105,6 +105,92 @@
       {% endfor %}  
       
 
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+
+
+    <!--Footer-->
+    <div class="container-fluid text-center px-5 py-5" id="footer">
+ 
+     <div class="row">
+ 
+       <div class="col">
+         <div class="row">
+           <img src="{% static 'img/logo.png' %}" alt="logo del cei" style="width: 10rem;" >
+         </div>
+         <div class="row">
+           <img src="{% static 'img/logoutal.png' %}" alt="logo de utal" style="width: 10rem;" class="my-5">
+         </div>
+       </div>
+ 
+       <div class="col">
+         <div class="row sec-footer">
+           Navegation
+         </div>
+         <ul class="list-footer">
+           <li class="mb-2">
+             <a href="#" class="item-footer">Home</a>
+           </li>
+           <li class="mb-2"> 
+             <a href="{% url 'research' %}" class="item-footer">Research</a>
+           </li>
+           <li class="mb-2">
+             <a href="{% url 'miembros' %}" class="item-footer">Members</a>
+           </li>
+           <li class="mb-2">
+             <a href="{% url 'pub' %}" class="item-footer">Publications</a>
+           </li>
+           <li class="mb-2">
+             <a href="{% url 'news' %}" class="item-footer">News</a>
+           </li>
+         </ul>
+       </div>
+ 
+       <div class="col">
+         <div class="row sec-footer">
+           Contact
+         </div>
+ 
+         <ul class="list-footer">
+           <li class="mb-2 item-footer">
+             contact@cei.cl
+           </li>
+           <li class="mb-2 item-footer"> 
+             Address: Universidad de Talca ¿?
+           </li>
+           
+         </ul>
+ 
+       </div>
+ 
+       <div class="col">
+         <div class="row sec-footer">
+           social networks
+         </div>
+ 
+         <ul class="list-footer">
+           <li class="mb-2 icon-footer">
+             <a href="https://www.instagram.com/" class="list-footer item-footer"> <i class="bi bi-instagram"></i> </a>
+           </li>
+           <li class="mb-2 icon-footer"> 
+             <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" class="list-footer item-footer"> <i class="bi bi-tiktok"></i> </a>
+           </li>
+           <li class="mb-2 icon-footer"> 
+             <a href="https://twitter.com/i/flow/login" class="list-footer item-footer"> <i class="bi bi-twitter-x"></i> </a>
+           </li>
+           
+         </ul>
+       </div>
+ 
+     </div>
+ 
+     <div class="row align-items-end justify-content-end">
+       <div class="col-2">
+         <a href="{% url 'login' %}" class="item-footer"> Private workspace </a>
+       </div>
+     </div>
+ 
     </div>
 
   

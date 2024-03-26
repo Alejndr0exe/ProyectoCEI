@@ -1,17 +1,21 @@
 from django import forms 
-from .models import Script, Data, Manual
+from .models import Categoria, Documento
 
-class addScript(forms.ModelForm):
-	class Meta:
-		model = Script
-		fields = ('documento','descripcion')
-		
-class addData(forms.ModelForm):
-	class Meta:
-		model = Data
-		fields = ('documento','descripcion')
+class addDoc(forms.Form):
+    documento = forms.FileField()
+    categoria = forms.ModelChoiceField(queryset=Categoria.objects.all())
+    investigador = forms.CharField(required=False)
+    proyecto = forms.CharField(required=False)
+    descripcion = forms.CharField(required=False) 
+    
 
-class addManual(forms.ModelForm):
-	class Meta:
-		model = Manual
-		fields = ('documento','descripcion')
+class addDoc(forms.ModelForm):
+    documento = forms.FileField()
+    categoria = forms.ModelChoiceField(queryset=Categoria.objects.all())
+    investigador = forms.CharField(required=False)
+    proyecto = forms.CharField(required=False)
+    descripcion = forms.CharField(required=False) 
+
+    class Meta:
+        model = Documento
+        fields = '__all__'

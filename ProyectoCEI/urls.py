@@ -30,20 +30,18 @@ urlpatterns = [
     path('', index, name='home'),
     path('accounts/', include("django.contrib.auth.urls")),
     path('members/', miembros, name='miembros'),
+	path('infoMembers/<int:id>', infoMiembro, name='infoMembers' ),
     path('newsPortal/', views.newsPortal, name='news' ),
     path('news/<int:id>', views.newCei, name='new' ),
     path('pub/', publications, name='pub'),
     path('research/', research, name='research'),
     path('intranet/', intranet, name='intranet'),
-    path('script/', script, name='script'),
-	path('addScript/', addScript, name='addScript'),
+    path('script/', script, name='script'),	
     path('data/', data, name='data'),
-	path('addData/', addData, name='addData'),
-    path('manuals/', manual, name='manuals'),
-	path('addManual/', addManual, name='addManual'),
-	path('eliminarScript/<int:id>/', eliminarScript, name='eliminarScript'),
-	path('eliminarData/<int:id>/', eliminarData, name='eliminarData'),
-	path('eliminarManual/<int:id>/', eliminarManual, name='eliminarManual'),
+	path('manuals/', manual, name='manuals'),
+	path('protocol/', protocol, name='protocol'),
+	path('eliminarDoc/<int:id>/', eliminarDoc, name='eliminarDoc'),
+
 
 
 ]

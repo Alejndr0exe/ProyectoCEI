@@ -188,18 +188,6 @@ body {
     text-align: start;
 }
 
-.intro-2{
-    height: 90px;
-    width: 450px;
-    padding: 6px;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    background: rgb(27, 27, 27, .5);
-    color: white;
-    transition: .5s ;
-    text-align: start;
-}
 
 #customCard h1{
     margin: 5px;
@@ -402,4 +390,11 @@ body {
 
 .w-100{
     height: 100vh;
+}
+
+.cuadro-scroll{
+    width: 100%; /* Ancho del cuadro scrollable */
+    height: 200px; /* Altura del cuadro scrollable */
+    overflow-y: scroll; /* Añadir scroll vertical */
+    padding: 10px; /* Espaciado interno */
 }

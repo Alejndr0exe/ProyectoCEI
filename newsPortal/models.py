@@ -6,3 +6,4 @@ class News(models.Model):
     subtitulo = models.CharField(max_length = 255)
     fecha = models.DateField()
     cuerpo = models.TextField()
+    img = models.ImageField(upload_to='news/', blank=True)

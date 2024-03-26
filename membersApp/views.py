@@ -28,3 +28,12 @@ def addMiembro(request):
     context = {'form': form }
 
     return render(request, "members/addMembers.html", context)
+
+def infoMiembro(request, id):
+
+    member = Members.objects.get(id = id)
+    data = {
+        'member' : member
+    }
+
+    return render(request,"members/infoMember.html", data)

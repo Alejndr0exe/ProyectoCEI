@@ -35,7 +35,7 @@ def script (request):
         'scripts': scripts
     }
 
-    return render(request, "intranetApp/scrpits.html", data)
+    return render(request, "intranetApp/scripts.html", data)
 
 @login_required
 def manual (request):

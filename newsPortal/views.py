@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from newsPortal.models import News
+from newsPortal.models import Noticias
 
 # Create your views here.
 def newsPortal(request):
-    news = News.objects.all()
+    news = Noticias.objects.all()
     data = {
         'news' : news
     }
@@ -11,7 +11,7 @@ def newsPortal(request):
     return render(request,"news/news.html", data) 
 
 def newCei (request, id):
-    new = News.objects.get (id = id)
+    new = Noticias.objects.get (id = id)
     data = {
         'new' : new
     }

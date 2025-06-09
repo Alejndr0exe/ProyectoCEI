@@ -1,47 +1,102 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Home{% endblock %}
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-{% endblock %}
-{% block extra_js %}
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-{% endblock %}
-{% block content %}
-<div class="container-fluid text-center" id="headerHome">
-  <div class="row justify-content-start">
-      <div class="col-7" id="tituloHome">
-          <h2 class="ms-5" style="font-weight: bold;">
-              Centre for Integrative Ecology
-          </h2>
-          <h4 class="ms-5" >
-            Understanding natural processes requires integrating diverse knowledge from various fields, aiming to <b>study ecological phenomena through a multiscale approach.</b>
-          </h4>
-      </div>
-  </div>
-</div>
+<!doctype html>
 
-<!--Lines of research-->
-<div class="row align-items-center justify-content-evenly mx-5 my-5">
-  <h5 class="col " style="font-weight: bold;">
-    Research lines:
-  </h5>
-  <a href="{% url 'research' %}" style="background-color: #025E73;" class="ovalos py-3 col"><i class="bi bi-stars"></i> Astroecology </a>
-  <a href="{% url 'research' %}" style="background-color: #B2CF53;" class="ovalos py-3 col"><i class="bi bi-bug-fill"></i> Microbial Ecology </a>
-  <a href="{% url 'research' %}" style="background-color: #D97823;" class="ovalos py-3 col"><i class="bi bi-feather2"></i> Plant Ecology </a>
-  <a href="{% url 'research' %}" style="background-color: #525507;" class="ovalos py-3 col"><i class="bi bi-people-fill"></i> Socioecology </a>
-</div>
-<hr class="mx-5">
-<!--News-->
-<div class="container-fluid text-center px-5 py-4">
-  <div class="row justify-content-between  my-5">
-    <div class="col-3">
-      <h3 style="color:#3A7DA4;">
-        Last News
-      </h3>
+    {% load static %}
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Centre of Integrative Ecology - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+  </head>
+
+  <body>
+
+    <!--Header-->
+    <div class="container-fluid text-center" id="headerHome">
+
+
+
+      <!--Navbar-->
+      <div class="row align-items-top justify-content-between">
+
+        <div class="col-2 mt-4">
+            
+          <img src="{% static 'img/logosolo.png' %}" alt="logo" width="130px">              
+
+        </div>
+
+        <div class="col-6 mt-5">
+
+          {% include 'includes/navbar.html' with active='home' %}
+
+        </div>
+          
+      </div>
+
+      <!--Titulo-->
+      <div class="row justify-content-start" >
+
+          <div class="col-7" id="tituloHome">
+              <h2 class="ms-5" style="font-weight: bold;">
+                  Centre for Integrative Ecology
+              </h2>
+              <h4 class="ms-5" >
+                Understanding natural processes requires integrating diverse knowledge from various fields, aiming to <b>study ecological phenomena through a multiscale approach.</b>
+              </h4>
+          </div>            
+
+      </div>
+
+
+
+
+    </div>
+
+
+    <!--About section-->
+    <div class="container my-5" id="aboutHome">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h3 class="mb-3" style="color:#3A7DA4; font-weight: bold;">
+            About us
+          </h3>
+          <p>
+            The Centre for Integrative Ecology (CEI) brings together researchers
+            from diverse disciplines to advance ecological understanding across
+            spatial and temporal scales.
+          </p>
+          <a href="{% url 'research' %}" class="btn btn-primary mt-3" style="background-color:#3A7DA4; border-color:#3A7DA4;">
+            Learn more about our work
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--Lines of research-->
+    <div class="row align-items-center justify-content-evenly mx-5 my-5">
+
+      <h5 class="col " style="font-weight: bold;">
+        Research lines:
+      </h5>
+
+      <a href="{% url 'research' %}" style="background-color: #025E73;" class="ovalos py-3 col"><i class="bi bi-stars"></i> Astroecology </a>
+      <a href="{% url 'research' %}" style="background-color: #B2CF53;" class="ovalos py-3 col"><i class="bi bi-bug-fill"></i> Microbial Ecology </a>
+      <a href="{% url 'research' %}" style="background-color: #D97823;" class="ovalos py-3 col"><i class="bi bi-feather2"></i> Plant Ecology </a>
+      <a href="{% url 'research' %}" style="background-color: #525507;" class="ovalos py-3 col"><i class="bi bi-people-fill"></i> Socioecology </a>
+
     </div>
     <a href="{% url 'news' %}" style="background-color:#3A7DA4; border-color:#3A7DA4; "  class="col-2 align-self-center btn btn-primary mt-3 mx-5"> News portal... </a>
   </div>

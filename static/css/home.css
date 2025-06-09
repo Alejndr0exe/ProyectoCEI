@@ -39,36 +39,8 @@
     transform: translateY(-3%);
 }
 
-@media (max-width: 768px) {
-    #tituloHome {
-        margin-top: 8%;
-        margin-bottom: 8%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
+#aboutHome {
+    background-color: #f8f9fa;
+    border-radius: 8px;
 
-    #tituloHome h2 {
-        font-size: 1.75rem;
-    }
-
-    #tituloHome h4 {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    #tituloHome {
-        margin-top: 10%;
-        margin-bottom: 10%;
-        padding-top: 4%;
-        padding-bottom: 4%;
-    }
-
-    #tituloHome h2 {
-        font-size: 1.5rem;
-    }
-
-    #tituloHome h4 {
-        font-size: 0.9rem;
-    }
 }

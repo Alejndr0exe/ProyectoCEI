@@ -87,9 +87,10 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'integrativeecology',
+        'NAME': 'ceiv2',
         'USER': 'root',
-        'PASSWORD': ''
+        'PASSWORD': '',
+        'PORT': '3307'
     }
 }
 

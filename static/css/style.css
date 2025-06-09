@@ -398,3 +398,7 @@ body {
     overflow-y: scroll; /* Añadir scroll vertical */
     padding: 10px; /* Espaciado interno */
 }
+
+.margin-hr {
+    margin-top: 0;
+}

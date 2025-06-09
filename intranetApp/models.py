@@ -9,7 +9,7 @@ class Categoria (models.Model):
 
 class Documento (models.Model):
     documento = models.FileField(upload_to='docs/', unique=True )
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE) 
     investigador = models.CharField(max_length=50)
     proyecto =  models.CharField(max_length=50, blank=True)
     descripcion = models.CharField(max_length=150, blank=True)

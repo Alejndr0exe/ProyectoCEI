@@ -32,8 +32,11 @@ def addMiembro(request):
 def infoMiembro(request, id):
 
     member = Members.objects.get(id = id)
+    members = Members.objects.all()
+
     data = {
-        'member' : member
+        'member' : member,
+        'members' : members
     }
 
     return render(request,"members/infoMember.html", data)

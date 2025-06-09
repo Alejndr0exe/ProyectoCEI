@@ -3,6 +3,7 @@
     background-image: url('../img/inicio.webp');
     background-size: cover;
     background-position: center;
+    min-height: 60vh;
 }
 
 #tituloHome {
@@ -13,6 +14,14 @@
     background-color: #6a6a6aaf;
     padding-top: 2%;
     padding-bottom: 2%;
+}
+
+#tituloHome h2 {
+    font-size: 2.5rem;
+}
+
+#tituloHome h4 {
+    font-size: 1.25rem;
 }
 
 .ovalos{
@@ -28,4 +37,38 @@
 .ovalos:hover{
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
     transform: translateY(-3%);
+}
+
+@media (max-width: 768px) {
+    #tituloHome {
+        margin-top: 8%;
+        margin-bottom: 8%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    #tituloHome h2 {
+        font-size: 1.75rem;
+    }
+
+    #tituloHome h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #tituloHome {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+
+    #tituloHome h2 {
+        font-size: 1.5rem;
+    }
+
+    #tituloHome h4 {
+        font-size: 0.9rem;
+    }
 }

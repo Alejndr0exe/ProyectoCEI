@@ -39,6 +39,7 @@
 .custom-nav-item {
     font-size: large;
     color: white;
+    transition: color 0.3s, border-bottom-color 0.3s;
 }
 
 .custom-nav-item:hover {
@@ -55,6 +56,13 @@ body {
 .custom-custom-toggler {
     border: 1px solid white;
     color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.custom-custom-toggler:focus,
+.custom-custom-toggler:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .icon-white {
@@ -165,4 +173,10 @@ body {
 
 .margin-hr {
     margin-top: 0;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }

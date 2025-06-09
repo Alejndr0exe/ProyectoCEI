@@ -29,3 +29,8 @@
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
     transform: translateY(-3%);
 }
+
+#aboutHome {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}

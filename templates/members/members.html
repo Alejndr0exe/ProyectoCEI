@@ -12,6 +12,54 @@
                 Members
             </h1>
         </div>
+
+      </div>
+
+        <!--Navbar-->
+        <div class="row justify-content-center">
+          <div class="col mt-3">
+
+              {% include 'includes/navbar.html' with active='members' %}
+
+          </div>                
+            
+        </div>
+
+        <!--Titulo-->
+          <div class="row justify-content-center" >
+
+              <div class="container ">
+                  <h1 class="display-3" id="tituloOthers">
+
+                      Members
+  
+                  </h1>
+              </div>            
+
+          </div>
+
+
+
+
+    </div>
+
+
+    <div class="container-fluid mt-5" id="containerMember">
+
+      {% for member in members %}
+
+      <div class="card" id="cardMember">
+        <figure>
+          <img src="{{ member.img.url }}" alt="{{ member.nombre }}">
+        </figure>
+        <div class="contenido">
+          <a href="{% url 'infoMembers' member.id %}" class="h4">{{ member.titulo }} {{ member.nombre }}</a>
+          <p>{{ member.academic_rank }}</p>
+        </div>
+      </div>
+
+      {% endfor %}  
+      
     </div>
 </div>
 <div class="container-fluid mt-5" id="containerMember">
